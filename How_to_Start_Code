@@ -1,0 +1,66 @@
+Writing code can be a fun and logical process! Here's a step-by-step approach to help you think through writing the code for a game like Rock, Paper, Scissors:
+------------------------------------------------------------------------------------------------------------------------
+Understand the Requirements:
+
+You need a game where a user can play Rock, Paper, Scissors against the computer.
+The game should continue until the user decides to stop.
+------------------------------------------------------------------------------------------------------------------------
+Break Down the Problem:
+
+List the choices: rock, paper, scissors.
+Get the user's choice.
+Randomly generate the computer's choice.
+Compare the choices to determine the winner.
+Ask if the user wants to play again.
+------------------------------------------------------------------------------------------------------------------------
+Plan the Logic:
+
+Use a loop to keep the game running.
+Use conditionals to handle invalid inputs and determine the game outcome.
+Use a random choice for the computer's selection.
+------------------------------------------------------------------------------------------------------------------------
+Write the Code:
+
+Import necessary modules.
+Define the choices.
+Create a loop for the game.
+Get user input and validate it.
+Generate the computer's choice.
+Compare choices and determine the winner.
+Ask if the user wants to play again.
+------------------------------------------------------------------------------------------------------------------------
+Here's how you can structure your code:
+
+import random
+
+choices = ["rock", "paper", "scissors"]
+
+print("Welcome to Rock Paper Scissors")
+
+while True:
+    user_choice = input("Enter your choice (rock, paper, scissors): ").lower()
+    if user_choice not in choices:
+        print("Invalid choice. Try again.")
+        continue
+
+    computer_choice = random.choice(choices)
+    print(f"Computer chose: {computer_choice}")
+
+    if user_choice == computer_choice:
+        print("It's a tie!")
+    elif (user_choice == "rock" and computer_choice == "scissors") or \
+         (user_choice == "paper" and computer_choice == "rock") or \
+         (user_choice == "scissors" and computer_choice == "paper"):
+        print("You win!")
+    else:
+        print("You lose!")
+
+    play_again = input("Do you want to play again? (yes/no): ").lower()
+    if play_again != 'yes':
+        print("Thanks for playing!")
+        break
+------------------------------------------------------------------------------------------------------------------------
+Test and Debug:
+Run your code to see if it works as expected.
+Fix any errors or bugs that come up.
+By breaking down the problem and planning your logic, you can write clear and effective code. Do you have any specific questions about this process?
