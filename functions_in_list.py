@@ -17,4 +17,5 @@ movie_recommendations_list.insert(1, 'agni')
 movie_recommendations_list.remove('eega')
 
 # Accessing elements using indexing
-print(movie_recommendations_list[1])
+print(movie_recommendations_list[1].upper())
+
